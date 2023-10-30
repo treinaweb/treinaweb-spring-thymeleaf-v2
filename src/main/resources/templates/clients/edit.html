@@ -9,14 +9,7 @@
   <link rel="stylesheet" th:href="@{/css/pico.min.css}">
 </head>
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>TWProjects</strong></li>
-    </ul>
-    <ul>
-      <li><a th:href="@{/clients}">Clientes</a></li>
-    </ul>
-  </nav>
+  <div th:replace="~{fragments/_navbar :: navbar}"></div>
 
   <main class="container">
     <h1>Editar Cliente</h1>

@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TWProjects - Página Não Encontrada</title>
-
-  <!-- Pico CSS Styles -->
-  <link rel="stylesheet" th:href="@{/css/pico.min.css}">
-</head>
-<body>
-  <div th:replace="~{fragments/_navbar :: navbar}"></div>
-
-  <main class="container">
+<html th:replace="~{layout :: layout (~{::title}, ~{::content}, _, _)}">
+  <th:block th:fragment="title">Página Não Encontrada</th:block>
+  
+  <th:block th:fragment="content">
     <h1>404</h1>
     <p>
       A página que você procura não foi encontrada
     </p>
     <a onclick="window.history.back()">Voltar</a>
-  </main>
-</body>
+  </th:block>
 </html>

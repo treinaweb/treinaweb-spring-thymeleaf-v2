@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TWProjects - Error</title>
-
-  <!-- Pico CSS Styles -->
-  <link rel="stylesheet" th:href="@{/css/pico.min.css}">
-</head>
-<body>
-  <div th:replace="~{fragments/_navbar :: navbar}"></div>
-
-  <main class="container">
+<html th:replace="~{layout :: layout (~{::title}, ~{::content}, _, _)}">
+  <th:block th:fragment="title">Error</th:block>
+  
+  <th:block th:fragment="content">
     <h1>Erro Interno</h1>
     <p th:text="${message}">
       Este é um projeto de exemplo para o curso de Spring Boot da TreinaWeb
     </p>
     <a onclick="window.history.back()">Voltar</a>
-  </main>
-</body>
+  </th:block>
 </html>

@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TWProjects - Listagem de Clientes</title>
-
-  <!-- Pico CSS Styles -->
-  <link rel="stylesheet" th:href="@{/css/pico.min.css}">
-</head>
-<body>
-  <div th:replace="~{fragments/_navbar :: navbar}"></div>
-
-  <main class="container">
+<html th:replace="~{layout :: layout (~{::title}, ~{::content}, _, _)}">
+  <th:block th:fragment="title">Listagem de Clientes</th:block>
+  
+  <th:block th:fragment="content">
     <h1>Listagem de Clientes</h1>
 
     <table th:if="${not clients.isEmpty()}">
@@ -46,6 +36,5 @@
     <p th:unless="${not clients.isEmpty()}">Não existem clientes cadastrados</p>
 
     <a th:href="@{/clients/create}" role="button">Novo cliente</a>
-  </main>
-</body>
+  </th:block>
 </html>

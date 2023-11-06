@@ -1,6 +1,6 @@
-# TreinaWeb Curso: Spring - Fundamentos
+# TreinaWeb Curso: Spring - Templates com Thymeleaf
 
-Repositório com o código produzido durante o curso Spring - Fundamentos da [TreinaWeb](https://www.treinaweb.com.br/).
+Repositório com o código produzido durante o curso Spring - Templates com Thymeleaf da [TreinaWeb](https://www.treinaweb.com.br/).
 
 ## Lista de Commits
 
